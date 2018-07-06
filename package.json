@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "private": true,
     "license": "MIT",
-    "author": "Asukalab",
+    "author": "",
     "engines": {
         "node": "8.11.3"
     },
