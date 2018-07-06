@@ -32,12 +32,11 @@ passport.use(
 
 			//サンプルユーザー
 			if(username == 'testUser@mail' && password == 'password'){
-				console.log("ログイン with email :"+username);
-        		return done(null, username);
+                console.log("ログイン with email :"+username);
+                var user = "テストユーザー"
+        		return done(null, user);
 			}
-
 			//ログイン失敗->401でレスポンスされる
-			console.log('ログイン失敗'+username)
        		return done(null, false, {message:'ID or Passwordが間違っています。'});
 		}
 	)
