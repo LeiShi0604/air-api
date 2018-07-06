@@ -32,10 +32,16 @@ router.get(
                 "message":"ログイン済み",
                 "userName":req.user.name
             });
-        }else{
+        }else if(!req.user){
             res.json({
                 "status":401,
                 "message":"セッションエラー",
+                "userName":""
+            });
+        }else{
+            res.json({
+                "status":500,
+                "message":"システムエラーが発生しました",
                 "userName":""
             });
         }
@@ -53,10 +59,16 @@ router.get(
                 "message":"ログアウト成功",
                 "userName":""
             });
-        }else{
+        }else if(!req.user){
             res.json({
                 "status":401,
                 "message":"セッションエラー",
+                "userName":""
+            });
+        }else{
+            res.json({
+                "status":500,
+                "message":"システムエラーが発生しました",
                 "userName":""
             });
         }
